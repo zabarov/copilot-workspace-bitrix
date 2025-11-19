@@ -1,0 +1,12 @@
+/vendor/
+/vendor-bin/
+/.idea/
+/.vscode/
+/.DS_Store
+Thumbs.db
+/.phpunit.cache/
+/.php-cs-fixer.cache
+/deptrac.cache
+/phpstan/resultCache.php
+/local/phpunit/cache/
+/copilot/results/

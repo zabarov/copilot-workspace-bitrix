@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    bootstrap="local/phpunit/bootstrap.php"
+    colors="true"
+    stopOnFailure="false"
+    failOnRisky="true"
+    failOnWarning="true"
+>
+    <testsuites>
+        <testsuite name="Module Tests">
+            <directory suffix="Test.php">./local/modules/your.module/tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

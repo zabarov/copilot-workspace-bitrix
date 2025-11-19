@@ -1,0 +1,20 @@
+paths:
+  - local/modules/your.module/lib
+layers:
+  - name: Domain
+    collectors:
+      - type: directory
+        regex: local/modules/your\.module/lib/Domain/.*
+  - name: Infrastructure
+    collectors:
+      - type: directory
+        regex: local/modules/your\.module/lib/Infrastructure/.*
+  - name: Application
+    collectors:
+      - type: directory
+        regex: local/modules/your\.module/lib/Application/.*
+ruleset:
+  Domain:
+    - Application
+  Application:
+    - Infrastructure

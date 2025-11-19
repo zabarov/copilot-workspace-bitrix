@@ -1,0 +1,25 @@
+# PHPStan config template for Bitrix module
+parameters:
+  level: 6
+
+  # Обновите путь к модулю под свой идентификатор
+  paths:
+    - %currentWorkingDirectory%/local/modules/your.module/lib
+    - %currentWorkingDirectory%/local/modules/your.module/admin
+
+  excludePaths:
+    analyse:
+      - %currentWorkingDirectory%/vendor
+      - %currentWorkingDirectory%/local/modules/your.module/lang
+      - %currentWorkingDirectory%/local/modules/your.module/install
+      - %currentWorkingDirectory%/local/modules/your.module/tests/_data/*
+      - %currentWorkingDirectory%/local/modules/your.module/install/admin/*
+
+  bootstrapFiles:
+    - %currentWorkingDirectory%/phpstan/bootstrap.php
+
+  scanFiles:
+    - %currentWorkingDirectory%/phpstan/stubs/_generated.bitrix.php
+    - %currentWorkingDirectory%/phpstan/stubs/bitrix.stub.php
+
+  treatPhpDocTypesAsCertain: false
