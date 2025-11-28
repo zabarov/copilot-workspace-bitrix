@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
-// Минимальная загрузка окружения для PHPStan.
+defined('B_PROLOG_INCLUDED') or define('B_PROLOG_INCLUDED', true);
+
+// автозагрузка composer, если есть
 $autoload = __DIR__ . '/../vendor/autoload.php';
 if (is_file($autoload)) {
     require_once $autoload;
@@ -34,6 +36,7 @@ if (!class_exists('CDatabase')) {
     }
 }
 
+// безопасные «пустышки» глобалей (только для анализа)
 if (!isset($GLOBALS['DB'])) {
     /** @var \CDatabase $DB */
     $GLOBALS['DB'] = new \CDatabase();

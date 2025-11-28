@@ -1,0 +1,24 @@
+parameters:
+  level: 6
+
+  # анализируем код модуля внутри папки сайта
+  paths:
+    - local/modules/simai.storage/lib
+    - local/modules/simai.storage/admin
+
+  excludePaths:
+    analyse:
+      - vendor
+      - local/modules/simai.storage/lang
+      - local/modules/simai.storage/install
+      - local/modules/simai.storage/tests/_data/*
+      - local/modules/simai.storage/install/admin/*
+
+  bootstrapFiles:
+    - phpstan/bootstrap.php
+
+  scanFiles:
+    - phpstan/stubs/_generated.bitrix.php
+    - phpstan/stubs/bitrix.stub.php
+
+  treatPhpDocTypesAsCertain: false

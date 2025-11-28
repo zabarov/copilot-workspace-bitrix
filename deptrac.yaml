@@ -1,20 +1,41 @@
-paths:
-  - local/modules/your.module/lib
-layers:
-  - name: Domain
-    collectors:
-      - type: directory
-        regex: local/modules/your\.module/lib/Domain/.*
-  - name: Infrastructure
-    collectors:
-      - type: directory
-        regex: local/modules/your\.module/lib/Infrastructure/.*
-  - name: Application
-    collectors:
-      - type: directory
-        regex: local/modules/your\.module/lib/Application/.*
-ruleset:
-  Domain:
-    - Application
-  Application:
-    - Infrastructure
+deptrac:
+  paths:
+    - local/modules/simai.storage/lib
+
+  layers:
+    - name: Core
+      collectors:
+        - type: directory
+          regex: '^local/modules/simai\.storage/lib/Core/.*'
+    - name: Domain
+      collectors:
+        - type: directory
+          regex: '^local/modules/simai\.storage/lib/Domain/(?!Port/).*'
+    - name: Ports
+      collectors:
+        - type: directory
+          regex: '^local/modules/simai\.storage/lib/Domain/Port/.*'
+    - name: Diagnostics
+      collectors:
+        - type: directory
+          regex: '^local/modules/samai\.storage/lib/Diagnostics/.*'
+    - name: Adapter_Bitrix
+      collectors:
+        - type: directory
+          regex: '^local/modules/simai\.storage/lib/Adapter/Bitrix/.*'
+
+  ruleset:
+    Core: ~
+    Domain:
+      - Core
+    Ports:
+      - Core
+      - Domain
+    Diagnostics:
+      - Core
+      - Domain
+      - Ports
+    Adapter_Bitrix:
+      - Core
+      - Domain
+      - Ports

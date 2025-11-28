@@ -1,12 +1,16 @@
 /vendor/
 /vendor-bin/
-/.idea/
-/.vscode/
-/.DS_Store
-Thumbs.db
-/.phpunit.cache/
 /.php-cs-fixer.cache
+/.phpunit.cache/
+/coverage/
 /deptrac.cache
 /phpstan/resultCache.php
-/local/phpunit/cache/
-/copilot/results/
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+# релизные артефакты
+/packages/
+# локальные overrides тестов/инструментов (если используете)
+phpunit.xml
+/.deptrac.cache
