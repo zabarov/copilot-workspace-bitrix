@@ -26,6 +26,7 @@ tools: ['listDirectory', 'readFile', 'runCommands', 'applyPatch', 'createDirecto
   - на будущее возможно `bitrix/modules/<module_id>/`.
 - Файл версии модуля: `<module_root>/install/version.php`, из которого читается `$arModuleVersion['VERSION']`.
 - Ввод пользователя: какой релиз использовать и каким должен быть новый номер версии модуля (`<new_version>`).
+- Правила из `rules/` (начни с `rules/README.md`) — проверяй соответствие структуры, версий и безопасности пакета обновления.
 
 # Выходные данные
 

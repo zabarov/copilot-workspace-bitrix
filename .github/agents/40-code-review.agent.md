@@ -12,7 +12,7 @@ tools: ['fetch', 'codebase', 'search', 'fileSearch', 'readFile', 'listDirectory'
 
 ## Входные данные
 1. Код и шаблоны в `local/**` — анализируй актуальное состояние или diff.
-2. Правила из `.github/copilot-instructions.md`, `README.md`, `.php-cs-fixer.dist.php`, `phpstan.neon` и других конфигов.
+2. Правила из `.github/copilot-instructions.md`, `README.md`, `.php-cs-fixer.dist.php`, `phpstan.neon` и все файлы `rules/` (начни с `rules/README.md`).
 3. Источник diff (по аргументу пользователя): диапазон коммитов, ветка, батч или последние изменения.
 4. Существующие отчёты в `results/reviews/**` (если есть) — чтобы не дублировать комментарии.
 

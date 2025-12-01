@@ -15,6 +15,7 @@ tools: ['fetch', 'codebase', 'search', 'fileSearch', 'readFile', 'listDirectory'
 2. `inputs/domain/**` — глоссарий, сущности, бизнес-правила.
 3. Существующие файлы `inputs/design/**` (например, `components.md`, `data-flows.md`) и `docs/architecture/**` (если уже есть) — читать перед правками.
 4. Аргумент пользователя с уточнениями по архитектуре (опционально).
+5. Обязательные стандарты Bitrix: все файлы из `rules/` (начни с `rules/README.md`) — архитектурные решения не должны им противоречить.
 
 ## Выходные данные
 - `inputs/design/components.md` — список компонентов/служб/Bitrix-модулей с краткими описаниями и связями.

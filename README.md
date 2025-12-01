@@ -51,16 +51,24 @@
 
 | Каталог | Назначение |
 | --- | --- |
-| `.git/` | История git и служебные объекты; не изменяем вручную. |
-| `.github/` | CI/automation, инструкции агентов и дополнительные конфиги GitHub. |
-| `docs/` | Архитектура, ADR, DSL, cookbook и прочая постоянная документация. |
-| `examples/` | Демонстрационные материалы: `snapshots/` (jsonl-снапшоты), `links/` (примеры проектов), `files/` (мелкие вложения). |
-| `inputs/` | Требования, промпты, батчи и другая оперативная информация для планирования. |
-| `local/` | Исходники Bitrix-модуля (код живёт в `local/modules/<module_id>/`). |
-| `packages/` | Готовые релизные (`releases/`) и обновленческие (`updates/`) пакеты; содержимое игнорируется git. |
+| `.github/` | CI/automation, инструкции агентов и конфиги GitHub. |
+| `rules/` | Обязательные правила разработки под Bitrix (`rules/README.md`). |
+| `docs/` | Архитектура, ADR, гайды (`docs/README.md`, `docs/guides/*`). |
+| `examples/` | Демоматериалы, снапшоты, ссылки, вложения (`examples/README.md`). |
+| `inputs/` | Требования, домен, дизайн, батчи, промпты (`inputs/README.md`). |
+| `local/` | Исходники Bitrix-модуля (`local/modules/<module_id>/`). |
+| `packages/` | Релизы и обновления (`packages/README.md`, `packages/releases/README.md`). |
 | `phpstan/` | Bootstrap и заглушки для статического анализа Bitrix-кода. |
-| `results/` | Рабочие артефакты: `checks/` (логи PHPStan/PHPUnit/CS) и `batches/` (отчёты об исполнении батчей). |
-| `vendor/` | Зависимости Composer, в том числе инструменты (`phpunit`, `phpstan`, `php-cs-fixer`). |
+| `results/` | Отчёты проверок и батчей (`results/README.md`). |
+| `vendor/` | Зависимости Composer (phpunit, phpstan, php-cs-fixer и т.д.). |
+
+### Где читать подробнее
+- `docs/README.md` — список постоянных документов и гайдов.
+- `docs/guides/copilot-bitrix-overview.md` — обзор workspace и цепочки агентов.
+- `inputs/README.md` — как устроены требования/домен/батчи.
+- `examples/README.md` — правила и структура примеров/снапшотов.
+- `packages/README.md` и `packages/releases/README.md` — как складывать релизы/обновления.
+- `results/README.md` — куда сохраняются логи проверок и отчёты батчей.
 
 Дополнительно в корне лежат конфигурации (`phpstan.neon`, `deptrac.yaml`, `.php-cs-fixer.dist.php`) и Composer-манифесты, которыми пользуется исполнительский контур (`30-code-build`, `40-tests-run` и другие агенты) при выполнении проверок.
 

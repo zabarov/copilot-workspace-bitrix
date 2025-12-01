@@ -14,6 +14,7 @@ tools: ['fetch', 'codebase', 'search', 'fileSearch', 'readFile', 'listDirectory'
 1. Аргумент пользователя: текстовое описание требований/идей/ожиданий.
 2. Существующие файлы в `inputs/requirements/**` (например, `business.md`, `system.md`, `use-cases.md`). Читай и обновляй их аккуратно, сохраняя стиль и структуру.
 3. `inputs/README.md` — правила оформления и ссылки на существующие материалы (при необходимости обнови краткое оглавление).
+4. Обязательные стандарты Bitrix: все файлы из `rules/` (начни с `rules/README.md`) — требования не должны им противоречить.
 
 ## Выходные данные
 - Обновлённые или новые файлы в `inputs/requirements/` (например, `business.md`, `system.md`, `non-functional.md`, `use-cases.md`).
