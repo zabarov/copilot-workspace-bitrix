@@ -1,28 +1,31 @@
 deptrac:
+  parameters:
+    module_id: __MODULE_ID__
+
   paths:
-    - local/modules/simai.storage/lib
+    - local/modules/%module_id%/lib
 
   layers:
     - name: Core
       collectors:
         - type: directory
-          regex: '^local/modules/simai\.storage/lib/Core/.*'
+          regex: '^local/modules/%module_id%/lib/Core/.*'
     - name: Domain
       collectors:
         - type: directory
-          regex: '^local/modules/simai\.storage/lib/Domain/(?!Port/).*'
+          regex: '^local/modules/%module_id%/lib/Domain/(?!Port/).*'
     - name: Ports
       collectors:
         - type: directory
-          regex: '^local/modules/simai\.storage/lib/Domain/Port/.*'
+          regex: '^local/modules/%module_id%/lib/Domain/Port/.*'
     - name: Diagnostics
       collectors:
         - type: directory
-          regex: '^local/modules/samai\.storage/lib/Diagnostics/.*'
+          regex: '^local/modules/%module_id%/lib/Diagnostics/.*'
     - name: Adapter_Bitrix
       collectors:
         - type: directory
-          regex: '^local/modules/simai\.storage/lib/Adapter/Bitrix/.*'
+          regex: '^local/modules/%module_id%/lib/Adapter/Bitrix/.*'
 
   ruleset:
     Core: ~

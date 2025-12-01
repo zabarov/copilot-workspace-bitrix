@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="local/phpunit/bootstrap.php"
+         colors="true"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         verbose="true">
+    <testsuites>
+        <testsuite name="Module Tests">
+            <directory>local/modules/__MODULE_ID__/tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

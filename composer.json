@@ -1,6 +1,6 @@
 {
-    "name": "simai/simai.storage",
-    "description": "SIMAI Storage v2",
+    "name": "vendor/module",
+    "description": "Bitrix module workspace template",
     "type": "library",
     "license": "proprietary",
     "require": {
@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Simai\\Storage\\": "local/modules/simai.storage/lib/"
+            "Vendor\\Module\\": "local/modules/__MODULE_ID__/lib/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Simai\\Storage\\Tests\\": "local/modules/simai.storage/tests/"
+            "Vendor\\Module\\Tests\\": "local/modules/__MODULE_ID__/tests/"
         }
     },
     "scripts": {

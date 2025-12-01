@@ -27,6 +27,7 @@ tools: ['fetch', 'codebase', 'search', 'fileSearch', 'readFile', 'listDirectory'
 
 ## Алгоритм
 1. Проверь, что установлены зависимости (`composer install` выполнен ранее) и конфиги доступны.
+2. Убедись, что конфиги не шаблонные: нет плейсхолдеров `__MODULE_ID__` и значений `vendor/module` в `composer.json`. Если это так — сообщи пользователю и предложи запустить агента `40-tools-init` для генерации конфигов под конкретный модуль.
 2. Запусти команды из корня проекта (минимальный набор, смотри README):
    ```bash
    vendor/bin/phpunit --log-junit results/checks/phpunit-junit.xml

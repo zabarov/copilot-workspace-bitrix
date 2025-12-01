@@ -1,18 +1,19 @@
 parameters:
+  # Замените module_id через агента 40-tools-init или вручную перед запуском проверок.
+  module_id: __MODULE_ID__
   level: 6
 
-  # анализируем код модуля внутри папки сайта
   paths:
-    - local/modules/simai.storage/lib
-    - local/modules/simai.storage/admin
+    - local/modules/%module_id%/lib
+    - local/modules/%module_id%/admin
 
   excludePaths:
     analyse:
       - vendor
-      - local/modules/simai.storage/lang
-      - local/modules/simai.storage/install
-      - local/modules/simai.storage/tests/_data/*
-      - local/modules/simai.storage/install/admin/*
+      - local/modules/%module_id%/lang
+      - local/modules/%module_id%/install
+      - local/modules/%module_id%/tests/_data/*
+      - local/modules/%module_id%/install/admin/*
 
   bootstrapFiles:
     - phpstan/bootstrap.php
